@@ -1,4 +1,4 @@
-package Juego;
+package Funcionamiento;
 
 public class Main {
 

@@ -1,4 +1,4 @@
-package Juego;
+package Funcionamiento;
 import javax.swing.JPanel;
 import java.awt.Graphics;
 

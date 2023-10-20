@@ -1,14 +1,13 @@
-package Juego;
-
+package Funcionamiento;
+import Usuario.Player;
 import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class Juego extends JPanel {
-    Player player= new Player();
+    Player player;
     public static boolean haChocado=false;
-    Trafico vehiculos;
-
+    Trafico vehiculos=new Trafico();
     Player coche=new Player();
 
     public Juego(){
@@ -49,7 +48,6 @@ public class Juego extends JPanel {
             }
         });
         setFocusable(true);
-        vehiculos = new Trafico(this);
     }
 
 }
