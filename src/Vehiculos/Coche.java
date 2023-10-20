@@ -2,36 +2,43 @@ package Vehiculos;
 
 public class Coche extends Vehiculo {
     private int carrilActual;
+    private int velocidad;
 
     public Coche() {
         super(10); // Velocidad constante del coche
         this.carrilActual = 2; // El coche comienza en el carril central.
     }
 
+    public void cambiarCarrilIzquierdo() {
+        if (carrilActual > 1) {
+            cambiarDeCarril(carrilActual - 1);
+        }
+    }
+
+    public void cambiarCarrilDerecho() {
+        if (carrilActual < 3) {
+            cambiarDeCarril(carrilActual + 1);
+        }
+    }
+
     @Override
     public void esquivarObstaculo() {
-        // Simulación simple: Cambiar de carril para esquivar obstáculos.
-        int nuevoCarril = carrilActual; // Inicialmente, el coche no cambia de carril.
+        // La lógica de esquiva de obstáculos se maneja por el usuario.
+        // El coche no cambia de carril automáticamente.
+    }
 
-        // Lógica para esquivar obstáculos.
-        if (carrilActual == 1) {
-            nuevoCarril = 2;
-        } else if (carrilActual == 2) {
-            // El coche alterna entre los carriles 1 y 3 para esquivar obstáculos.
-            nuevoCarril = (Math.random() < 0.5) ? 1 : 3;
-        } else if (carrilActual == 3) {
-            nuevoCarril = 2;
-        }
+    public void acelerar() {
+        velocidad += 1;
+    }
 
-        if (nuevoCarril != carrilActual) {
-            cambiarDeCarril(nuevoCarril);
+    public void frenar() {
+        if (velocidad > 0) {
+            velocidad -= 1;
         }
     }
 
     public void cambiarDeCarril(int nuevoCarril) {
+        System.out.println("Vehiculos.Coche cambió del carril " + carrilActual + " al carril " + nuevoCarril);
         carrilActual = nuevoCarril;
-        System.out.println("Vehiculos.Coche cambió al carril " + nuevoCarril);
     }
-
-
 }
