@@ -1,3 +1,5 @@
+package Usuario;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 public class Controles implements KeyListener {
