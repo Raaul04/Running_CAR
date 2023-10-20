@@ -1,24 +1,28 @@
 package Vehiculos;
 
 public class Moto extends Vehiculo {
-    private int posicion;
+    private int carrilActual;
 
-    public Moto() {
-        super(25); // Velocidad constante de la moto
-        this.posicion = 0; // Inicialmente, la moto comienza en la posición 0.
+    public Moto(int velocidadInicial) {
+        super(velocidadInicial);
+        // Inicialmente, las motos pueden estar en cualquier carril (1, 2 o 3).
+        this.carrilActual = (int) (Math.random() * 3) + 1;
     }
 
     @Override
     public void esquivarObstaculo() {
-        // Implementación para actuar como un obstáculo (sin esquivar obstáculos).
-        System.out.println("Moto en el camino en la posición " + posicion + " Debes esquivarla.");
-        // Actualiza la posición de la moto hacia adelante en cada llamada.
-        System.out.println("Moto esquivada con exito");
-        avanzar();
+        // Las motos cambian aleatoriamente de carril para dificultar el adelantamiento.
+        int nuevoCarril;
+        do {
+            nuevoCarril = (int) (Math.random() * 3) + 1;
+        } while (nuevoCarril == carrilActual);
+        cambiarDeCarril(nuevoCarril);
     }
 
-    public void avanzar() {
-        // Simplemente incrementa la posición en cada llamada.
-        posicion++;
+    public void cambiarDeCarril(int nuevoCarril) {
+        if (nuevoCarril != carrilActual) {
+            System.out.println("Moto cambió del carril " + carrilActual + " al carril " + nuevoCarril);
+            carrilActual = nuevoCarril;
+        }
     }
 }
