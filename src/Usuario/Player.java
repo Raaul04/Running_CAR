@@ -54,9 +54,9 @@ public class Player implements KeyListener {
     }
 
     /**
-     * Obtiene los límites del objeto Player como una forma elíptica.
+     * Obtiene los limites del objeto Player como una forma elíptica.
      *
-     * @return Un objeto Ellipse2D que representa los límites del jugador.
+     * @return Un objeto Ellipse2D que representa los limites del jugador.
      */
     public Ellipse2D getBoundsCoche() {
         return new Ellipse2D.Double(x + 10, y + 30, 80, 50);

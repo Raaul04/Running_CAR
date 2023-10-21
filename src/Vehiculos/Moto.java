@@ -1,7 +1,7 @@
 package Vehiculos;
 
 /**
- * La clase Moto representa un tipo de vehículo que puede cambiar de carril aleatoriamente para esquivar obstáculos.
+ * La clase Moto representa un tipo de vehiculo que puede cambiar de carril aleatoriamente para esquivar obstaculos.
  */
 public class Moto extends Vehiculo {
     private int carrilActual;
@@ -18,7 +18,7 @@ public class Moto extends Vehiculo {
     }
 
     /**
-     * Implementación del método para que la moto esquive obstáculos cambiando de carril.
+     * Implementación del metodo para que la moto esquive obstaculos cambiando de carril.
      */
     @Override
     public void esquivarObstaculo() {
@@ -33,11 +33,11 @@ public class Moto extends Vehiculo {
     /**
      * Cambia el carril actual de la moto a uno especificado.
      *
-     * @param nuevoCarril El nuevo carril al que se moverá la moto.
+     * @param nuevoCarril El nuevo carril al que se movera la moto.
      */
     public void cambiarDeCarril(int nuevoCarril) {
         if (nuevoCarril != carrilActual) {
-            System.out.println("Moto cambió del carril " + carrilActual + " al carril " + nuevoCarril);
+            System.out.println("Moto cambio del carril " + carrilActual + " al carril " + nuevoCarril);
             carrilActual = nuevoCarril;
         }
     }

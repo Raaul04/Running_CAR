@@ -16,7 +16,7 @@ public class Ventana extends JFrame {
     /**
      * Constructor para crear una nueva instancia de Ventana.
      *
-     * @param panel El panel de juego que se agregará a la ventana.
+     * @param panel El panel de juego que se agregara a la ventana.
      */
     public Ventana(Panel panel) {
         ventana = new JFrame();

@@ -1,6 +1,6 @@
 package Vehiculos;
 /**
- *La clase Coche representa un tipo de vehículo que puede cambiar de carril aleatoriamente para esquivar obstáculos.
+ *La clase Coche representa un tipo de vehiculo que puede cambiar de carril aleatoriamente para esquivar obstaculos.
  */
 public class Coche extends Vehiculo {
     private int carrilActual;
@@ -59,7 +59,7 @@ public class Coche extends Vehiculo {
      * @param nuevoCarril el nuevo carril
      */
     public void cambiarDeCarril(int nuevoCarril) {
-        System.out.println("El Coche cambió del carril " + carrilActual + " al carril " + nuevoCarril);
+        System.out.println("El Coche cambio del carril " + carrilActual + " al carril " + nuevoCarril);
         carrilActual = nuevoCarril;
     }
 }

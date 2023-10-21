@@ -1,7 +1,7 @@
 package Vehiculos;
 
 /**
- * La clase abstracta Vehiculo representa un tipo genérico de vehículo que se mueve en una carretera.
+ * La clase abstracta Vehiculo representa un tipo generico de vehiculo que se mueve en una carretera.
  */
 public abstract class Vehiculo {
     private int posicionX;
@@ -18,7 +18,7 @@ public abstract class Vehiculo {
     }
 
     /**
-     * Mueve el vehículo avanzando su posición en la carretera y llama al método para esquivar obstáculos.
+     * Mueve el vehiculo avanzando su posición en la carretera y llama al metodo para esquivar obstaculos.
      */
     public void mover() {
         posicionX += velocidad;
@@ -26,14 +26,14 @@ public abstract class Vehiculo {
     }
 
     /**
-     * Aumenta la velocidad del vehículo en una unidad.
+     * Aumenta la velocidad del vehiculo en una unidad.
      */
     public void acelerar() {
         velocidad += 1;
     }
 
     /**
-     * Reduce la velocidad del vehículo en una unidad, si es mayor que cero.
+     * Reduce la velocidad del vehiculo en una unidad, si es mayor que cero.
      */
     public void frenar() {
         if (velocidad > 0) {
@@ -42,33 +42,33 @@ public abstract class Vehiculo {
     }
 
     /**
-     * Obtiene la velocidad actual del vehículo.
+     * Obtiene la velocidad actual del vehiculo.
      *
-     * @return La velocidad actual del vehículo.
+     * @return La velocidad actual del vehiculo.
      */
     public int getVelocidad() {
         return velocidad;
     }
 
     /**
-     * Obtiene la posición actual del vehículo en la carretera.
+     * Obtiene la posicion actual del vehiculo en la carretera.
      *
-     * @return La posición actual del vehículo.
+     * @return La posicion actual del vehiculo.
      */
     public int getPosicionX() {
         return posicionX;
     }
 
     /**
-     * Método abstracto que debe ser implementado por las subclases para esquivar obstáculos de manera específica.
+     * Metodo abstracto que debe ser implementado por las subclases para esquivar obstaculos de manera especifica.
      */
     public abstract void esquivarObstaculo();
 
     /**
-     * Verifica si el vehículo colisiona con otro vehículo.
+     * Verifica si el vehiculo colisiona con otro vehiculo.
      *
-     * @param otroVehiculo El vehículo con el que se verifica la colisión.
-     * @return `true` si hay colisión, `false` de lo contrario.
+     * @param otroVehiculo El vehiculo con el que se verifica la colision.
+     * @return `true` si hay colision, `false` de lo contrario.
      */
     public boolean colisionCon(Vehiculo otroVehiculo) {
         int distancia = Math.abs(this.posicionX - otroVehiculo.getPosicionX());
@@ -76,13 +76,13 @@ public abstract class Vehiculo {
     }
 
     /**
-     * Devuelve una representación en forma de cadena del objeto que incluye el nombre de la clase
+     * Devuelve una representacion en forma de cadena del objeto que incluye el nombre de la clase
      * y la posición actual del vehículo.
      *
-     * @return Una cadena que muestra el tipo de vehículo y su posición.
+     * @return Una cadena que muestra el tipo de vehículo y su posicion.
      */
     @Override
     public String toString() {
-        return this.getClass().getName() + " en la posición " + posicionX;
+        return this.getClass().getName() + " en la posicion " + posicionX;
     }
 }
