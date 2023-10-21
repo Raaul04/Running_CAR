@@ -1,6 +1,6 @@
 package Vehiculos;
 /**
- *La clase Camion representa un tipo de vehículo que puede cambiar de carril aleatoriamente para esquivar obstaculos.
+ *La clase Camion representa un tipo de vehículo que puede cambiar de carril aleatoriamente
  */
 public class Camion extends Vehiculo {
     private int carrilActual;
@@ -13,7 +13,7 @@ public class Camion extends Vehiculo {
     public Camion(int velocidadInicial) {
         super(velocidadInicial);
         // Inicialmente, los camiones pueden estar en cualquier carril (1, 2 o 3).
-        this.carrilActual = (int) (Math.random() * 3) + 1;
+        this.carrilActual = (int) (Math.random() * 4) ;
     }
 
 
@@ -25,7 +25,7 @@ public class Camion extends Vehiculo {
     public void esquivarObstaculo() {
         int nuevoCarril;
         do {
-            nuevoCarril = (int) (Math.random() * 3) + 1;
+            nuevoCarril = (int) (Math.random() * 4) ;
         } while (nuevoCarril == carrilActual);
         cambiarDeCarril(nuevoCarril);
     }
