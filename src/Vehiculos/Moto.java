@@ -1,7 +1,7 @@
 package Vehiculos;
 
 /**
- * La clase Moto representa un tipo de vehiculo que puede cambiar de carril aleatoriamente para esquivar obstaculos.
+ * La clase Moto representa un tipo de vehiculo que puede cambiar de carril aleatoriamente.
  */
 public class Moto extends Vehiculo {
     private int carrilActual;
@@ -14,7 +14,7 @@ public class Moto extends Vehiculo {
     public Moto(int velocidadInicial) {
         super(velocidadInicial);
         // Inicialmente, las motos pueden estar en cualquier carril (1, 2 o 3).
-        this.carrilActual = (int) (Math.random() * 3) + 1;
+        this.carrilActual = (int) (Math.random() * 4);
     }
 
     /**
@@ -25,7 +25,7 @@ public class Moto extends Vehiculo {
         // Las motos cambian aleatoriamente de carril para dificultar el adelantamiento.
         int nuevoCarril;
         do {
-            nuevoCarril = (int) (Math.random() * 3) + 1;
+            nuevoCarril = (int) (Math.random() * 4) ;
         } while (nuevoCarril == carrilActual);
         cambiarDeCarril(nuevoCarril);
     }
