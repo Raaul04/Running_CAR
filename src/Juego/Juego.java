@@ -1,5 +1,5 @@
-package Funcionamiento;
-import Usuario.Player;
+package Juego;
+
 import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -7,13 +7,13 @@ import java.awt.event.KeyListener;
 public class Juego extends JPanel {
     Player player;
     public static boolean haChocado=false;
-    Trafico vehiculos=new Trafico();
+    Trafico vehiculos=new Trafico(this);
     Player coche=new Player();
 
     public Juego(){
         JFrame miVentana = new JFrame("Running Car");
-        Juego game = new Juego();
-        miVentana.add(game);
+
+        miVentana.add(this);
         miVentana.setSize(500,900);
         miVentana.setVisible(true);
         miVentana.setResizable(false);

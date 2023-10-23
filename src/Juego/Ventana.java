@@ -1,7 +1,7 @@
-package Usuario;
+package Juego;
 
-import Funcionamiento.Juego;
-import Funcionamiento.Panel;
+import Juego.Juego;
+import Juego.Panel;
 
 import javax.swing.JFrame;
 

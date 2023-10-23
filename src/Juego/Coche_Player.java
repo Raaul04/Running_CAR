@@ -1,15 +1,18 @@
-package Vehiculos;
+package Juego;
+
+import Vehiculos.Vehiculo;
+
 /**
  *La clase Coche representa un tipo de vehiculo que puede cambiar de carril aleatoriamente para esquivar obstaculos.
  */
-public class Coche extends Vehiculo {
+public class Coche_Player extends Vehiculo {
     private int carrilActual;
     private int velocidad;
 
     /**
      * Es el constructor
      */
-    public Coche() {
+    public Coche_Player() {
         super(10); // Velocidad constante del coche
         this.carrilActual = 2; // El coche comienza en el carril central.
     }

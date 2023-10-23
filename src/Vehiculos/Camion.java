@@ -1,4 +1,5 @@
 package Vehiculos;
+
 /**
  *La clase Camion representa un tipo de vehículo que puede cambiar de carril aleatoriamente
  */
