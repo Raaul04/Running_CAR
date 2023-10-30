@@ -3,6 +3,7 @@
 La aplicación "Running Car" es un juego simple en el que controlas un coche y debes esquivar obstáculos en la carretera. El coche puede cambiar de carril  para evitar colisiones.
 
 ## Descripción detallada de la aplicación
+<img width="507" alt="UML_NUEVO" src="https://github.com/Raaul04/Trabajo_carrera/assets/144156038/b27e75db-fb37-4541-91fd-b55790418635">
 
 La aplicación "Running Car" es un juego de conducción en el que debes guiar un coche a través del tráfico, evitando colisiones con otros vehículos. Algunas características clave incluyen:
 
