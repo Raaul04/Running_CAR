@@ -6,11 +6,11 @@ public class Main {
 
     public static void main(String[] args) {
         // SwingUtilities.invokeLater se utiliza para asegurarse de que la interfaz de usuario se actualice en el Event Dispatch Thread (EDT),
-        // que es necesario para operaciones relacionadas con la interfaz gráfica en Swing.
+        // Se necesita para operaciones relacionadas con la interfaz gráfica en Swing.
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                // Crear una instancia de TitleManagement para gestionar la transición entre la pantalla de título y el juego
+                // Creamos una instancia de TitleManagement para gestionar la transición entre la pantalla de título y el juego
                 TitleManagement titleManagement = new TitleManagement();
 
                 // Configurar y mostrar la ventana principal
