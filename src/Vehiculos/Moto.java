@@ -13,7 +13,7 @@ public class Moto extends Vehiculo {
      */
     public Moto(int velocidadInicial) {
         super(velocidadInicial);
-        // Inicialmente, las motos pueden estar en cualquier carril (1, 2 o 3).
+        //las motos pueden estar en cualquier carril (1, 2 o 3).
         this.carrilActual = (int) (Math.random() * 4);
     }
 
