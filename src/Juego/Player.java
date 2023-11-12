@@ -23,6 +23,7 @@ public class Player implements KeyListener {
         }
     }
 
+    //Posible implementacion
 
     /*
         public void keyPressed(KeyEvent e) {
