@@ -1,8 +1,5 @@
 package Juego;
-
-/**import java.awt.*;
- import java.awt.geom.Ellipse2D;*/
-
+import Juego.Coche_Player;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -17,7 +14,6 @@ public class Player implements KeyListener {
         RIGHT = false;
     }
 
-
     public void update() {
         if (LEFT && x > 0) {
             x -= velocidad;
@@ -28,13 +24,19 @@ public class Player implements KeyListener {
     }
 
 
-    /**
-     * public void update() {
-     * LEFT = keys[KeyEvent.VK_LEFT];
-     * RIGHT = keys[KeyEvent.VK_RIGHT];
-     * }
-     */
+    /*
+        public void keyPressed(KeyEvent e) {
+        int key = e.getKeyCode();
 
+        if (key == KeyEvent.VK_A) {
+            // Presionó la tecla "a" (izquierda), implementa el giro a la izquierda aquí
+            cambiarCarrilIzquierdo();
+        } else if (key == KeyEvent.VK_D) {
+            // Presionó la tecla "d" (derecha), implementa el giro a la derecha aquí
+            cambiarCarrilDerecho();
+        }
+    }
+     */
     @Override
     public void keyPressed(KeyEvent e) {
         keys[e.getKeyCode()] = true;
@@ -62,16 +64,3 @@ public class Player implements KeyListener {
 
     }
 }
-/**public Ellipse2D getBoundsCoche() {
- return new Ellipse2D.Double(x + 10, y + 30, 80, 50);
- }
-
- }*/
-
-
-/**public boolean llegaFinal(){
- Rectangle cuadrado= new Rectangle(320, 820, 110, 110);
- Area cuadrado =new Area(cuadrado);
- return cuadradoArea.contains(getBoundsCoche().getcoche());
- }
- }*/

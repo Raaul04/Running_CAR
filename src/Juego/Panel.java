@@ -7,7 +7,7 @@ public class Panel extends JPanel {
 
     public void paintComponent(Graphics g){
 
-        super.paintComponent(g);//limpiar cual mujer
+        super.paintComponent(g);
 
         g.fillRect(100,100,10,10);
     }

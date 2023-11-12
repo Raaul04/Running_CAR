@@ -1,28 +1,16 @@
 package Juego;
 
-import Juego.Juego;
-import Juego.Panel;
+import javax.swing.*;
 
-import javax.swing.JFrame;
-
-/**
- * La clase Ventana representa la ventana principal del juego y contiene el panel de juego y al jugador.
- */
 public class Ventana extends JFrame {
-    private JFrame ventana;
     private Juego juego;
-    private Player player;
+    private Coche_Player coche; //referencia al Coche_Player
 
-    /**
-     * Constructor para crear una nueva instancia de Ventana.
-     *
-     * @param panel El panel de juego que se agregara a la ventana.
-     */
     public Ventana(Panel panel) {
-        ventana = new JFrame();
-        ventana.setSize(400, 400); // Tamaño de la ventana de juego
-        ventana.add(panel);
-        ventana.setVisible(true);
-        player = new Player();
+        setSize(400, 400); // Tamaño de la ventana de juego
+        add(panel);
+        coche = new Coche_Player(this); //  la ventana como parámetro al constructor del Coche_Player
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // la ventana se cierre correctamente
+        setVisible(true);
     }
 }
