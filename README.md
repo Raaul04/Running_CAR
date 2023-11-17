@@ -8,16 +8,15 @@ La aplicación "Running Car" es un juego sencillo que te pone al volante de un c
 ![BOCETO](https://github.com/Raaul04/Trabajo_carrera/assets/144156038/2d51e55a-6705-468f-91e1-5a4d97012adc)
 
 ## Descripción detallada de la aplicación:
+<img width="501" alt="UML_PRACTICA_4" src="https://github.com/Raaul04/Running_CAR/assets/144156038/08c8c9df-01e6-42aa-8b44-157ef9bda391">
 
 La aplicación utiliza un esquema de clases implementado en Java y hace uso de la biblioteca Swing para la interfaz gráfica. El juego incluye las siguientes características clave:
 
 - Control del coche mediante eventos de teclado.
 - Obstáculos en movimiento que representan el tráfico en la carretera.
-- Cambio aleatorio de carril del coche para dificultar el adelantamiento.
 - El objetivo es avanzar lo más lejos posible sin colisiones.
 
 ## UML:
-![UML](https://github.com/Raaul04/Trabajo_carrera/assets/144156038/b27e75db-fb37-4541-91fd-b55790418635)
 
 ## Componentes del Juego:
 
@@ -48,21 +47,44 @@ La aplicación está implementada en Java y utiliza la biblioteca Swing para la 
 Para ejecutar el juego, utiliza la clase `Main` y ejecuta el método `main`:
 
 ```java
-package Juego;
+package VideoJuego;
+
 import Title.TitleManagement;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
 public class Main {
 
     public static void main(String[] args) {
+        // SwingUtilities.invokeLater se utiliza para asegurarse de que la interfaz de usuario se actualice en el Event Dispatch Thread (EDT),
+        // Se necesita para operaciones relacionadas con la interfaz gráfica en Swing.
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
+                // Creamos una instancia de TitleManagement para gestionar la transición entre la pantalla de título y el juego
                 TitleManagement titleManagement = new TitleManagement();
+
+                // Configurar y mostrar la ventana principal
                 titleManagement.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                titleManagement.setSize(400, 400);
+                titleManagement.setSize(200, 200);
                 titleManagement.setVisible(true);
+
+                // Agregar un ActionListener al botón "Iniciar juego" en TitleManagement
+                titleManagement.addStartButtonActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        // Cuando se hace clic en "Iniciar juego", ocultar la pantalla de título y mostrar el juego
+                        titleManagement.setVisible(false);
+
+                        // Crear e iniciar el juego
+                        Juego juego = new Juego();
+                    }
+                });
             }
         });
     }
 }
+
