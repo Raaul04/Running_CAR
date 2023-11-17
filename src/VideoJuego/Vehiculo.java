@@ -1,8 +1,5 @@
-package Vehiculos;
+package VideoJuego;
 
-/**
- * La clase abstracta Vehiculo representa un tipo generico de vehiculo que se mueve en una carretera.
- */
 public abstract class Vehiculo {
     private int posicionX;
     private int velocidad;
@@ -22,7 +19,6 @@ public abstract class Vehiculo {
      */
     public void mover() {
         posicionX += velocidad;
-        esquivarObstaculo();
     }
 
     /**
@@ -49,7 +45,6 @@ public abstract class Vehiculo {
     public int getVelocidad() {
         return velocidad;
     }
-
     /**
      * Obtiene la posicion actual del vehiculo en la carretera.
      *
@@ -58,23 +53,6 @@ public abstract class Vehiculo {
     public int getPosicionX() {
         return posicionX;
     }
-
-    /**
-     * Metodo abstracto que debe ser implementado por las subclases para esquivar obstaculos de manera especifica.
-     */
-    public abstract void esquivarObstaculo();
-
-    /**
-     * Verifica si el vehiculo colisiona con otro vehiculo.
-     *
-     * @param otroVehiculo El vehiculo con el que se verifica la colision.
-     * @return `true` si hay colision, `false` de lo contrario.
-     */
-    public boolean colisionCon(Vehiculo otroVehiculo) {
-        int distancia = Math.abs(this.posicionX - otroVehiculo.getPosicionX());
-        return distancia < 20; // Ajusta este valor según la lógica de colisión deseada
-    }
-
     /**
      * Devuelve una representacion en forma de cadena del objeto que incluye el nombre de la clase
      * y la posición actual del vehículo.
@@ -85,4 +63,5 @@ public abstract class Vehiculo {
     public String toString() {
         return this.getClass().getName() + " en la posicion " + posicionX;
     }
+
 }

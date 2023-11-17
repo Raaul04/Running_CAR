@@ -1,6 +1,6 @@
 package Title;
 
-import Juego.Juego;
+import VideoJuego.Juego;
 
 import javax.swing.*;
 import java.awt.*;
@@ -25,9 +25,14 @@ public class Title extends JPanel {
         this.titleManagement = titleManagement;
 
         setLayout(new BorderLayout());
+        setBackground(new Color(135, 206, 250));  // Fondo de color cielo azul claro
 
         // Configurar el botón de inicio
-        startButton = new JButton("Empieza");
+        startButton = new JButton("¡Comienza!");
+        startButton.setFont(new Font("Arial", Font.BOLD, 20));
+        startButton.setForeground(Color.BLACK);
+        startButton.setBackground(new Color(60, 179, 113));  // Fondo de color verde pastel
+        startButton.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
         startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -37,5 +42,9 @@ public class Title extends JPanel {
 
         // Agregar componentes a la pantalla de título
         add(startButton, BorderLayout.CENTER);
+    }
+
+    public void addStartButtonActionListener(ActionListener listener) {
+        startButton.addActionListener(listener);
     }
 }
