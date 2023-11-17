@@ -8,7 +8,6 @@ La aplicación "Running Car" es un juego sencillo que te pone al volante de un c
 ![BOCETO](https://github.com/Raaul04/Trabajo_carrera/assets/144156038/2d51e55a-6705-468f-91e1-5a4d97012adc)
 
 ## Descripción detallada de la aplicación:
-<img width="501" alt="UML_PRACTICA_4" src="https://github.com/Raaul04/Running_CAR/assets/144156038/08c8c9df-01e6-42aa-8b44-157ef9bda391">
 
 La aplicación utiliza un esquema de clases implementado en Java y hace uso de la biblioteca Swing para la interfaz gráfica. El juego incluye las siguientes características clave:
 
@@ -17,23 +16,39 @@ La aplicación utiliza un esquema de clases implementado en Java y hace uso de l
 - El objetivo es avanzar lo más lejos posible sin colisiones.
 
 ## UML:
+<img width="501" alt="UML_PRACTICA_4" src="https://github.com/Raaul04/Running_CAR/assets/144156038/08c8c9df-01e6-42aa-8b44-157ef9bda391">
 
 ## Componentes del Juego:
 
 La aplicación "Running Car" consta de las siguientes clases principales:
 
 1. **Clase Juego:** Interfaz principal del juego.
-2. **Clase Coche:** Representa el vehículo del jugador.
-3. **Clase Moto:** Representa un tipo de vehículo que puede cambiar de carril aleatoriamente.
-4. **Clase Camión:** Representa un tipo de vehículo que puede cambiar de carril aleatoriamente.
-5. **Clase Tráfico:** Gestiona la posición de obstáculos en el juego y lleva un registro de puntos.
-6. **Clase Ventana:** Representa la ventana principal del juego.
-7. **Clase Player:** Representa al jugador en el juego y gestiona su movimiento.
-8. **Clase Title:** Representa la pantalla de inicio del juego con un botón de inicio.
-9. **Clase TitleManagement:** Gestiona la pantalla de inicio y la transición al juego principal.
+2. **Clase Coche_Player:** Clase que hereda de la clase abstracta Vehiculo y representa el coche del          jugador en el juego..
+3. **Clase Title:** Representa la pantalla de inicio del juego con un botón de inicio.
+4. **Clase TitleManagement:** Gestiona la pantalla de inicio y la transición al juego principal.
+5. **Clase Controles**:  Clase que implementa KeyListener para gestionar los controles del jugador en el      juego.
+6. **Clase Panel**:Clase que extiende JPanel y proporciona una personalización adicional al juego.
+7. **Clase Obstaculo**:Clase que representa los obstáculos en el juego.
 
+
+**Pantalla de Inicio - TitleManagement:**
+   - ![Pantalla de Inicio](<img width="135" alt="TITLE" 
+      src="https://github.com/Raaul04/Running_CAR/assets/144156038/bd379008-db69-4716-a20d-bf07fe59ef59">
+)
+
+ **Juego en Progreso:**
+   - ![Juego en Progreso](<img width="604" alt="Juego"             
+    src="https://github.com/Raaul04/Running_CAR/assets/144156038/2d390a3c-8269-4e50-926c-ecbbaa925d25">)
+
+
+**Cambiar de Carril :**
+   - ![Cambiar de Carril](<img width="749" alt="CAMBIO_DE_CARRIL" src="https://github.com/Raaul04/Running_CAR/assets/144156038/70e7226d-f3a5-493a-82ba-7ea453521201">
+)
+
+
+
+   
 ## Uso:
-
 1. Ejecuta la aplicación.
 2. Utiliza las teclas de dirección para controlar el coche y evitar colisiones.
 3. Disfruta del juego y trata de llegar lo más lejos posible.
