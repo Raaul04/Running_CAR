@@ -38,8 +38,8 @@ La aplicación "Running Car" consta de las siguientes clases principales:
 
  **Juego en Progreso:**
  
-     <img width="604" alt="Juego"             
-    src="https://github.com/Raaul04/Running_CAR/assets/144156038/2d390a3c-8269-4e50-926c-ecbbaa925d25">
+  <img width="604" alt="Juego" src="https://github.com/Raaul04/Running_CAR/assets/144156038/67ccf60d-34d5-414e-a3eb-b207a1fa7b00">
+
 
 
 
