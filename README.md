@@ -34,7 +34,7 @@ La aplicación "Running Car" consta de las siguientes clases principales:
 **Pantalla de Inicio - TitleManagement:**
    - <img width="135" alt="TITLE" 
       src="https://github.com/Raaul04/Running_CAR/assets/144156038/bd379008-db69-4716-a20d-bf07fe59ef59">
-)
+
 
  **Juego en Progreso:**
    - <img width="604" alt="Juego"             
@@ -42,8 +42,9 @@ La aplicación "Running Car" consta de las siguientes clases principales:
 
 
 
+ **Cambiar de Carril:**
 
-**Cambiar de Carril:**
+ 
    <img width="749" alt="CAMBIO_DE_CARRIL" src="https://github.com/Raaul04/Running_CAR/assets/144156038/efff1313-54b4-4be5-87ba-c9fe51f206d8">
 
    
