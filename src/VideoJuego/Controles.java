@@ -25,7 +25,7 @@ public class Controles implements KeyListener {
             int x = juego.carPanel.getX();
             int y = juego.carPanel.getY();
 
-            System.out.println(x + "," + y);
+            System.out.println("Coordenadas :"+x + "," + y);
 
             if (x - juego.velocidad > 120) {
                 juego.carPanel.setLocation(x - juego.velocidad, y);

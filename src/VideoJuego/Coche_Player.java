@@ -15,31 +15,10 @@ public class Coche_Player extends Vehiculo {
         this.frame = frame;
 
     }
-    
+
     public void actualizarPosicion() {
         cocheLabel.setBounds(250 + carrilActual * 100, 500, 90, 90);
         cocheLabel.repaint();
-    }
-
-    /**
-     * Metodo para cambiar al carril izquierdo
-     */
-    public void cambiarCarrilIzquierdo() {
-        if (carrilActual > 1) {
-            cambiarDeCarril(carrilActual - 1);
-            actualizarPosicion();
-        }
-    }
-
-    /**
-     * Metodo para cambiar al carril derecho
-     */
-    public void cambiarCarrilDerecho() {
-        if (carrilActual < 3) {
-            cambiarDeCarril(carrilActual + 1);
-            actualizarPosicion();
-
-        }
     }
 
     /**
@@ -62,15 +41,7 @@ public class Coche_Player extends Vehiculo {
         }
     }
 
-    /**
-     * Metodo para cambiar de Carril
-     *
-     * @param nuevoCarril el nuevo carril
-     */
-    public void cambiarDeCarril(int nuevoCarril) {
-        System.out.println("El Coche cambio del carril " + carrilActual + " al carril " + nuevoCarril);
-        carrilActual = nuevoCarril;
-    }
+
 
     public JLabel getCocheLabel() {
         return cocheLabel;
