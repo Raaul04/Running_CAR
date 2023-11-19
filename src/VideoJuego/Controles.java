@@ -2,20 +2,39 @@ package VideoJuego;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
+/**
+ * La clase Controles implementa la interfaz KeyListener para manejar eventos de teclado en el juego.
+ * Controla las acciones del jugador, como mover el coche hacia la izquierda o la derecha.
+ */
 public class Controles implements KeyListener {
     Juego juego;
     Coche_Player coche;
 
+    /**
+     * Constructor de la clase Controles.
+     *
+     * @param ref La referencia al objeto Juego al que se aplicarán los controles.
+     */
     public Controles(Juego ref) {
         this.juego = ref;
     }
 
+    /**
+     * No se utiliza en esta implementación.
+     *
+     * @param e El evento de teclado generado.
+     */
     @Override
     public void keyTyped(KeyEvent e) {
         //no la usamos
     }
 
+    /**
+     * Maneja el evento cuando una tecla es presionada.
+     * Mueve el coche hacia la izquierda o la derecha según la tecla presionada.
+     *
+     * @param e El evento de teclado generado.
+     */
     @Override
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode();
@@ -59,6 +78,11 @@ public class Controles implements KeyListener {
 
     }
 
+    /**
+     * No se utiliza en esta implementación.
+     *
+     * @param e El evento de teclado generado.
+     */
     @Override
     public void keyReleased(KeyEvent e) {
         //no la usamos

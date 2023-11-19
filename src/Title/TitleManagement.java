@@ -46,7 +46,8 @@ public class TitleManagement extends JFrame {
 
     /**
      * Agrega un ActionListener al botón de inicio en la pantalla de título.
-     * @param listener ActionListener a agregar
+     *
+     * @param listener ActionListener a agregar.
      */
     public void addStartButtonActionListener(ActionListener listener) {
         title.addStartButtonActionListener(listener);

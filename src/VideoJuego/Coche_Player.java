@@ -4,6 +4,10 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 
 public class Coche_Player extends Vehiculo {
+    public Rectangle getBounds() {
+        return new Rectangle(cocheLabel.getBounds());
+    }
+
     private int carrilActual;
     private int velocidad;
     private JFrame frame;
