@@ -9,6 +9,8 @@ import java.awt.event.KeyListener;
 public class Controles implements KeyListener {
     Juego juego;
     Coche_Player coche;
+    private int xObstaculo= 200, yObstaculo=5;
+
 
     /**
      * Constructor de la clase Controles.
@@ -39,37 +41,41 @@ public class Controles implements KeyListener {
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode();
 
+
         if (code == 37) {
             System.out.println("Presiono boton izquierdo ");
-            int x = juego.carPanel.getX();
-            int y = juego.carPanel.getY();
+            int x = juego.getCarPanel().getX();
+            int y = juego.getCarPanel().getY();
 
             System.out.println("Coordenadas :"+x + "," + y);
 
-            if (x - juego.velocidad > 120) {
-                juego.carPanel.setLocation(x - juego.velocidad, y);
+            if (x - juego.getVelocidad_horizontal() > 120) {
+                juego.getCarPanel().setLocation(x - juego.getVelocidad_horizontal(), y);
+                //juego.getObstaculoCoche().setLocation(xObstaculo,yObstaculo+=5);
+
             }
         }
         else if (code == 39) {
             System.out.println("Presiono boton derecho");
 
-            int x = juego.carPanel.getX();
-            int y = juego.carPanel.getY();
+            int x = juego.getCarPanel().getX();
+            int y = juego.getCarPanel().getY();
 
             System.out.println(x + "," + y);
             //Ahora necesitamos el tamaño del size
-            int carWidth = juego.carPanel.getWidth();
-            int limiteDerecho = 520;  // Ajusta este valor según tus necesidades
+            int carWidth = juego.getCarPanel().getWidth();
+            int limiteDerecho = 520;  // Ajusto este valor según  mis necesidades
 
-            // Imprimo porque me esta dando errores
+            // DEPURAR porque me esta dando errores
             System.out.println("Posición actual del coche (x): " + x);
-            System.out.println("Velocidad del juego: " + juego.velocidad);
+            System.out.println("Velocidad del juego: " + juego.getVelocidad_horizontal());
             System.out.println("Ancho del coche: " + carWidth);
             System.out.println("Límite derecho: " + limiteDerecho);
 
             if (x < limiteDerecho) {
-                juego.carPanel.setLocation(x + juego.velocidad, y);
-                System.out.println("Nueva posición del coche (x): " + (x + juego.velocidad));
+                juego.getCarPanel().setLocation(x + juego.getVelocidad_horizontal(), y);
+                //juego.getObstaculoPanel().setLocation(xObstaculo,yObstaculo+=5);
+                System.out.println("Nueva posición del coche (x): " + (x + juego.getVelocidad_horizontal()));
             } else {
                 System.out.println("El coche alcanzó el límite derecho, no se mueve.");
             }

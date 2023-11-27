@@ -2,10 +2,9 @@ package VideoJuego;
 
 import Title.TitleManagement;
 
-import java.awt.*;
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.*;
 
 public class Main {
 
@@ -32,6 +31,8 @@ public class Main {
 
                         // Crear e iniciar el juego
                         Juego juego = new Juego();
+                        juego.starGameThread();
+
                     }
                 });
             }
