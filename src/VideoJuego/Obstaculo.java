@@ -3,9 +3,7 @@ package VideoJuego;
 import java.awt.*;
 
 public abstract class Obstaculo{
-
     public Juego game;
-
     public Coche_Player vehiculo;
 
     /**
@@ -14,19 +12,9 @@ public abstract class Obstaculo{
     public int x = 260, y = 100;
 
     /**
-     * Ancho y largo del obctaculo.
-     */
-    public int width = 30, height = 30;
-
-    /**
      * Limites para que no se salga de la carretera.
      */
     public static int limIzq = 120, limDer = 520;
-
-    /**
-     * Puntos del obstaculo.
-     */
-    public int puntos = 0;
 
     /**
      * Velocidad del obstaculo.
@@ -37,8 +25,8 @@ public abstract class Obstaculo{
      * Constructor.
      * @param game clase principal del Juego.
      */
-    public Obstaculo(Juego game){
 
+    public Obstaculo(Juego game){
         this.game = game;
     }
 
@@ -48,23 +36,6 @@ public abstract class Obstaculo{
      */
     public Juego getGame(){
         return game;
-    }
-
-    /**
-     * Devuelve los puntos del obstaculo.
-     * @return puntos del obstaculo
-     */
-    public int getPuntos(){
-
-        return puntos;
-    }
-    /**
-     * Establece los puntos de cada obstaculo.
-     * @param puntos de cada obstaculo.
-     */
-    public void setPuntos(int puntos){
-
-        this.puntos = puntos;
     }
 
     /**
@@ -98,9 +69,12 @@ public abstract class Obstaculo{
      */
     public boolean choque(){
 
+
         vehiculo.vidas--;
+
         if(vehiculo.vidas == 0){
             System.out.println("Has perdido");
+            return true;
         }
         return false;
     }
@@ -112,7 +86,6 @@ public abstract class Obstaculo{
 
         return x;
     }
-
     /**
      * Devuelve la posicion en Y del obstaculo.
      */
@@ -121,21 +94,5 @@ public abstract class Obstaculo{
         return y;
     }
 
-    /**
-     * Devuelve la anchura del obstaculo.
-     */
-
-    public int getWidth() {
-
-        return width;
-    }
-
-    /**
-     * Devuelve la altura del obstaculo.
-     */
-    public int getHeight() {
-
-        return height;
-    }
 }
 

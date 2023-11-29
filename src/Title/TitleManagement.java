@@ -1,8 +1,10 @@
 package Title;
 
+import VideoJuego.Juego;
+import VideoJuego.Singleton;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
@@ -38,10 +40,17 @@ public class TitleManagement extends JFrame {
         title.setVisible(false);
 
         // Crear y mostrar el juego
-        game = new VideoJuego.Juego();
+        //game = new VideoJuego.Juego(juego);
+        game= Singleton.getJuego();
+        System.out.println("Creado juego");
         add(game, BorderLayout.CENTER);
         pack(); // Ajustar el tamaño de la ventana
         setLocationRelativeTo(null);
+
+    }
+
+    public Juego getGame() {
+        return game;
     }
 
     /**

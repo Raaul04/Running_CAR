@@ -10,51 +10,63 @@ import java.util.Random;
  * el coche del jugador y la lógica asociada.
  * Extiende JPanel para proporcionar un lienzo en el que se representarán los elementos del juego.
  */
-public class Juego extends JPanel implements Runnable {
+public class Juego extends JPanel  {
 
     Thread gameThread;
-    private int FPS=60;//cantidad de fotogramas por segundo a la que queremos que funcione el juego,
     private Coche_Player coche;
-    Controles ctrl;
+    Mecanica ctrl;
 
 
     private JFrame fr;
     private JPanel carPanel;
     private JPanel obstaculoPanel;
+    //private JPanel motoPanel;
+
+    private JPanel valla;
     private JLabel background;
     private int velocidad_horizontal;
     private int width;
     private int height;
 
-    private int xObstaculo=250;
-    private int yObstaculo=5;
+
+    //public boolean running;
+    private Random random = new Random();
+    private int xObstaculo= random.nextInt(401) + 120;
+    private int yObstaculo=0;
 
     private int nivel=0;
     private int puntos = 0;
+
 
 
     /**
      * Constructor de la clase Juego.
      * Inicializa las variables de configuración del juego y llama al método IniciarJuego().
      */
-    public Juego() {
+    public Juego(Juego juego) {
         width = 823;
         height = 645;
         velocidad_horizontal =15;
-        ctrl = new Controles(this);
-        IniciarJuego();
+        ctrl = new Mecanica(this);
+        MetodoPrincipal();
     }
+
 
     /**
      * Inicializa y configura la ventana principal del juego.
      * Configura la interfaz gráfica de usuario, establece el fondo y posiciona el coche.
      */
-    private void IniciarJuego() {
+    public void MetodoPrincipal() {
+        //running = true;
+        ctrl.coche = new Coche_Player();
+
         fr = new JFrame("Running Car");
         fr.setLayout(null);
         background = new JLabel("", new ImageIcon(Objects.requireNonNull(getClass().getResource("/background-image.jpg"))), JLabel.CENTER);
         background.setBounds(0, 0, width, height);
         fr.add(background);
+
+
 
         carPanel = new JPanel();
         carPanel.setSize(180, 150);
@@ -70,26 +82,43 @@ public class Juego extends JPanel implements Runnable {
         carPanel.setOpaque(false); // No mostrar el fondo transparente
 
 
+
+
         obstaculoPanel=new JPanel();
-        obstaculoPanel.setSize(123,277);
+        obstaculoPanel.setSize(150,277);
 
         // Añadir imagen del Coche_Obstaculo al JPanel
         ImageIcon obstaculoIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Coche_Obstaculo.png")));
         Image image1 = obstaculoIcon.getImage();
-        Image scaledImage1 = image1.getScaledInstance(90, 160, Image.SCALE_SMOOTH); // Escalar la imagen al tamaño deseado
+        Image scaledImage1 = image1.getScaledInstance(150, 160, Image.SCALE_SMOOTH); // Escalar la imagen al tamaño deseado
         ImageIcon scaledObstaculoIcon = new ImageIcon(scaledImage1);
         JLabel obstaculo = new JLabel(scaledObstaculoIcon);
         obstaculoPanel.add(obstaculo);
-        obstaculoPanel.setLocation(250, 5);  // ajustar la ubicación del obstáculo
-        System.out.println("OBSTACULO EN POSICION");
-
+        obstaculoPanel.setLocation(xObstaculo, yObstaculo);  // ajustar la ubicación del obstáculo
+        System.out.println("primera posicion*");
+        //Mecanica controles=new Mecanica(this);
+        //controles.moveObstacle();
         obstaculoPanel.setOpaque(false); // No mostrar el fondo transparente
 
 
 
+/*
+
         //Añadir imagen de la moto Obstaculo al JPanel
+        motoPanel=new JPanel();
+        motoPanel.setSize(123,277);
 
+        // Añadir imagen del Coche_Obstaculo al JPanel
+        ImageIcon obstaculoIcon2 = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Moto_Obstaculo.png")));
+        Image image2 = obstaculoIcon2.getImage();
+        Image scaledImage2 = image1.getScaledInstance(120, 160, Image.SCALE_SMOOTH); // Escalar la imagen al tamaño deseado
+        ImageIcon scaledObstaculoIcon1 = new ImageIcon(scaledImage1);
+        JLabel moto = new JLabel(scaledObstaculoIcon1);
+        motoPanel.add(moto);
+        motoPanel.setLocation(200, 10);  // ajustar la ubicación del obstáculo
+        motoPanel.setOpaque(false); // No mostrar el fondo transparente
 
+*/
 
 
 
@@ -110,18 +139,35 @@ public class Juego extends JPanel implements Runnable {
         // Configuración de la ventana principal
         background.add(carPanel);
         background.add(obstaculoPanel);
+        //background.add(motoPanel);
+        //background.add(valla);
         fr.setSize(width, height); // Ajustar el tamaño
         fr.setVisible(true);
-        fr.setResizable(false); // Evitar que el coche se mueva al ampliar el frame
+        fr.setResizable(false); // No deja ampliar pantalla del fr
         fr.setLocationRelativeTo(null);
         fr.addKeyListener(ctrl);
         fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        //UN hilo
-
 
     }
 
+
+
+    public void starGameThread(){
+        gameThread=new Gameloop(this);
+        gameThread.start();
+    }
+    public boolean colision() {
+        Rectangle carBounds = carPanel.getBounds();
+        Rectangle obstaculoBounds = obstaculoPanel.getBounds();
+        return carBounds.intersects(obstaculoBounds);
+    }
+
+    public void terminarJuego() {
+        JOptionPane.showMessageDialog(null, "Game Over. ¡Chocaste!", "Game Over", JOptionPane.INFORMATION_MESSAGE);
+        gameThread = null;
+        System.exit(0);
+    }
 
 
 
@@ -137,81 +183,19 @@ public class Juego extends JPanel implements Runnable {
         this.velocidad_horizontal = velocidad_horizontal;
     }
 
-    /**
-     * Implementación del método run de la interfaz Runnable.
-     * Contiene la lógica principal para la ejecución del juego en un hilo separado.
-     * Controla el ciclo del juego y actualiza la lógica a una frecuencia objetivo de 60 FPS.
-     */
-    public void starGameThread(){
-        gameThread=new Thread(this);
-        gameThread.start();
-    }
-    public void run() {
-        // Bucle principal de actualización del juego
-        double dibujarIntervalo=1000000000/FPS;
-        double siguenteDibujo=System.nanoTime()+dibujarIntervalo;
-        Random random = new Random();
 
-
-        int i=5;
-
-        while (gameThread!=null) {
-
-            // Pausa para mantener la frecuencia de actualización
-            try {
-                double tiempoEspera=siguenteDibujo-System.nanoTime();
-                tiempoEspera=tiempoEspera/1000000;
-
-                obstaculoPanel.setLocation(xObstaculo, yObstaculo+=5);
-                i++;
-                System.out.println("i: "+ i);
-
-
-
-                /*
-                if(obstaculoPanel.getY()>=645||obstaculoPanel.getX()<120||obstaculoPanel.getX()>520){
-
-                    obstaculoPanel.y =5 ;
-                    obstaculoPanel.x = random.nextInt(401)+120;//Ajusta el rango segun los limites izquierdo y derechos
-
-
-                    //obstaculoPanel.getGame().sumaPuntos(obstaculoPanel.getPuntos());
-                }*/
-                //obstaculoPanel.setLocation();
-
-                if(tiempoEspera<0){
-                    tiempoEspera=0;
-                }
-
-                Thread.sleep((long)tiempoEspera);
-                siguenteDibujo+=dibujarIntervalo;
-
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+    public int getxObstaculo() {
+        return xObstaculo;
     }
 
-    public int getFPS() {
-        return FPS;
+
+    public int getyObstaculo() {
+        return yObstaculo;
     }
 
     public JPanel getCarPanel() {
         return carPanel;
     }
-
-    public void setFPS(int fps) {
-        this.FPS = fps;
-    }
-
-    /**
-     * Devuelve la posicion en X del obstaculo.
-     */
-
-
-    /**
-     * Devuelve la posicion en Y del obstaculo.
-     */
 
     public JPanel getObstaculoCoche(){
         return obstaculoPanel;
@@ -227,10 +211,6 @@ public class Juego extends JPanel implements Runnable {
     public void sumaPuntos(int puntos) {
 
     }
-    /**
-     * Devuelve los puntos del obstaculo.
-     * @return puntos del obstaculo
-     */
     public int getPuntos(){
 
         return puntos;

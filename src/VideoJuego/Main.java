@@ -30,8 +30,10 @@ public class Main {
                         titleManagement.setVisible(false);
 
                         // Crear e iniciar el juego
-                        Juego juego = new Juego();
+                        Juego juego;
+                        juego = Singleton.getJuego();
                         juego.starGameThread();
+
 
                     }
                 });

@@ -2,33 +2,34 @@ package VideoJuego;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.Random;
+
 /**
  * La clase Controles implementa la interfaz KeyListener para manejar eventos de teclado en el juego.
  * Controla las acciones del jugador, como mover el coche hacia la izquierda o la derecha.
  */
-public class Controles implements KeyListener {
+public class Mecanica implements KeyListener {
     Juego juego;
     Coche_Player coche;
-    private int xObstaculo= 200, yObstaculo=5;
 
+    private Random random;
+    private int xObstaculo=0 ;
+    private int yObstaculo;
 
     /**
      * Constructor de la clase Controles.
      *
      * @param ref La referencia al objeto Juego al que se aplicarán los controles.
      */
-    public Controles(Juego ref) {
+    public Mecanica(Juego ref) {
         this.juego = ref;
+        this.random = new Random();
     }
 
-    /**
-     * No se utiliza en esta implementación.
-     *
-     * @param e El evento de teclado generado.
-     */
+
     @Override
     public void keyTyped(KeyEvent e) {
-        //no la usamos
+        //no lo usamos
     }
 
     /**
@@ -41,49 +42,57 @@ public class Controles implements KeyListener {
     public void keyPressed(KeyEvent e) {
         int code = e.getKeyCode();
 
-
-        if (code == 37) {
-            System.out.println("Presiono boton izquierdo ");
+        if (code == 37) { // Tecla izquierda
             int x = juego.getCarPanel().getX();
             int y = juego.getCarPanel().getY();
-
-            System.out.println("Coordenadas :"+x + "," + y);
 
             if (x - juego.getVelocidad_horizontal() > 120) {
                 juego.getCarPanel().setLocation(x - juego.getVelocidad_horizontal(), y);
-                //juego.getObstaculoCoche().setLocation(xObstaculo,yObstaculo+=5);
-
+                //moverObstaculoAleatorio();
+                //System.out.println("Avanzando");
+                /*if (yObstaculo >= 470) {
+                    yObstaculo = 0;  // Restablece la posición y del obstáculo
+                    juego.getObstaculoPanel().setLocation(xObstaculo, yObstaculo);
+                }*/
             }
-        }
-        else if (code == 39) {
-            System.out.println("Presiono boton derecho");
 
+        } else if (code == 39) { // Tecla derecha
             int x = juego.getCarPanel().getX();
             int y = juego.getCarPanel().getY();
-
-            System.out.println(x + "," + y);
-            //Ahora necesitamos el tamaño del size
             int carWidth = juego.getCarPanel().getWidth();
-            int limiteDerecho = 520;  // Ajusto este valor según  mis necesidades
-
-            // DEPURAR porque me esta dando errores
-            System.out.println("Posición actual del coche (x): " + x);
-            System.out.println("Velocidad del juego: " + juego.getVelocidad_horizontal());
-            System.out.println("Ancho del coche: " + carWidth);
-            System.out.println("Límite derecho: " + limiteDerecho);
+            int limiteDerecho = 520;
 
             if (x < limiteDerecho) {
                 juego.getCarPanel().setLocation(x + juego.getVelocidad_horizontal(), y);
-                //juego.getObstaculoPanel().setLocation(xObstaculo,yObstaculo+=5);
-                System.out.println("Nueva posición del coche (x): " + (x + juego.getVelocidad_horizontal()));
+                //moverObstaculoAleatorio();
+                //System.out.println("Avanzando");
+                /*if (yObstaculo >= 470) {
+                    yObstaculo = 0;  // Restablece la posición y del obstáculo
+                    juego.getObstaculoPanel().setLocation(xObstaculo, yObstaculo);
+                }*/
             } else {
                 System.out.println("El coche alcanzó el límite derecho, no se mueve.");
             }
-
         }
-
     }
 
+    public void moverObstaculoAleatorio() {
+        int nuevoXObstaculo = xObstaculo + random.nextInt(201) - 100;
+
+        // Ajusta los límites para xObstaculo
+        int limiteIzquierdo = 120;
+        int limiteDerecho = 520; // Ajusta este valor según tus necesidades
+
+        if (nuevoXObstaculo < limiteIzquierdo) {
+            nuevoXObstaculo = limiteIzquierdo;
+        } else if (nuevoXObstaculo > limiteDerecho) {
+            nuevoXObstaculo = limiteDerecho;
+        }
+
+        xObstaculo = nuevoXObstaculo;
+
+        juego.getObstaculoCoche().setLocation(xObstaculo, yObstaculo += 15);
+    }
     /**
      * No se utiliza en esta implementación.
      *
