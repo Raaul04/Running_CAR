@@ -35,9 +35,11 @@ public class Gameloop  extends Thread {
 
                 obstaculo.setLocation(obstaculo.getX(),obstaculo.getY()+5);
 
-                if(obstaculo.getY()>=470){
-                    obstaculoY=0;
-                    obstaculo.setLocation(obstaculoX,obstaculoY);
+                if (obstaculo.getY() >= 470) {
+                    // Generar una nueva posición aleatoria para el obstáculo
+                    obstaculoY = 0;
+                    obstaculoX = random.nextInt(401) + 120;
+                    obstaculo.setLocation(obstaculoX, obstaculoY);
                 }
 
 
