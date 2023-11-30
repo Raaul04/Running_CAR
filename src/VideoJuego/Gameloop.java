@@ -13,14 +13,20 @@ public class Gameloop  extends Thread {
     }
     @Override
     public void run() {
+        try {
+            Thread.sleep(1000); // Pausa de 1 segundo
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         // Bucle principal de actualización del juego
-        double dibujarIntervalo=1000000000/FPS;
+        double dibujarIntervalo = 1000000000.0 / FPS;
         double siguenteDibujo=System.nanoTime()+dibujarIntervalo;
-        int i=1;
         JPanel obstaculo=juego.getObstaculoPanel();
          int obstaculoY= juego.getyObstaculo();
         Random random=new Random();
         int obstaculoX= random.nextInt(401) + 120;
+
+
         while (haTerminado) {
             // Pausa para mantener la frecuencia de actualización
             try {
@@ -54,6 +60,7 @@ public class Gameloop  extends Thread {
             }
         }
     }
+
 
     // Función para verificar colisiones
     public boolean colision() {

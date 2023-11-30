@@ -46,7 +46,7 @@ public class Mecanica implements KeyListener {
             int x = juego.getCarPanel().getX();
             int y = juego.getCarPanel().getY();
 
-            if (x - juego.getVelocidad_horizontal() > 120) {
+            if (x - juego.getVelocidad_horizontal() > 130) {
                 juego.getCarPanel().setLocation(x - juego.getVelocidad_horizontal(), y);
                 //moverObstaculoAleatorio();
                 //System.out.println("Avanzando");
@@ -65,7 +65,7 @@ public class Mecanica implements KeyListener {
             int carWidth = juego.getCarPanel().getWidth();
             int limiteDerecho = 520;
 
-            if (x < limiteDerecho) {
+            if (x - juego.getVelocidad_horizontal() < limiteDerecho) {
                 juego.getCarPanel().setLocation(x + juego.getVelocidad_horizontal(), y);
                 //moverObstaculoAleatorio();
                 //System.out.println("Avanzando");

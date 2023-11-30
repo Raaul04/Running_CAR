@@ -36,7 +36,7 @@ public class Juego extends JPanel  {
     private int xObstaculo= random.nextInt(401) + 120;
     private int yObstaculo=0;
 
-    private int nivel=0;
+    private int vidas=3;
 
 
 
@@ -47,7 +47,7 @@ public class Juego extends JPanel  {
     public Juego(Juego juego) {
         width = 823;
         height = 645;
-        velocidad_horizontal =20;
+        velocidad_horizontal =30;
         ctrl = new Mecanica(this);
         MetodoPrincipal();
     }
@@ -166,6 +166,17 @@ public class Juego extends JPanel  {
         return carBounds.intersects(obstaculoBounds);
     }
 
+    public void decrementarVida() {
+        vidas--;
+        if (vidas <= 0) {
+            terminarJuego();
+        }
+    }
+
+    public boolean hayVidasRestantes() {
+        return vidas > 0;
+    }
+
     public void terminarJuego() {
         JOptionPane.showMessageDialog(null, "Game Over. ¡Chocaste!", "Game Over", JOptionPane.INFORMATION_MESSAGE);
         gameThread = null;
@@ -203,11 +214,11 @@ public class Juego extends JPanel  {
     public JPanel getObstaculoCoche(){
         return obstaculoPanel;
     }
-    public int getNivel() {
-        return nivel;
-    }
 
-    public void setNivel(int nivel) {
-        this.nivel = nivel;
+    public int getVidas() {
+        return vidas;
+    }
+    public void setVidas(int vidas) {
+        this.vidas = vidas;
     }
 }
