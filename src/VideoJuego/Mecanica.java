@@ -55,6 +55,9 @@ public class Mecanica implements KeyListener {
                     juego.getObstaculoPanel().setLocation(xObstaculo, yObstaculo);
                 }*/
             }
+            else{
+                System.out.println("Alcanzo el limite Izquierdo, no se mueve");
+            }
 
         } else if (code == 39) { // Tecla derecha
             int x = juego.getCarPanel().getX();
@@ -76,6 +79,7 @@ public class Mecanica implements KeyListener {
         }
     }
 
+    /*
     public void moverObstaculoAleatorio() {
         int nuevoXObstaculo = xObstaculo + random.nextInt(201) - 100;
 
@@ -93,6 +97,8 @@ public class Mecanica implements KeyListener {
 
         juego.getObstaculoCoche().setLocation(xObstaculo, yObstaculo += 15);
     }
+
+     */
     /**
      * No se utiliza en esta implementación.
      *

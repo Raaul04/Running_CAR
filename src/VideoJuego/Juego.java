@@ -15,6 +15,8 @@ public class Juego extends JPanel  {
     Thread gameThread;
     private Coche_Player coche;
     Mecanica ctrl;
+    private Rectangle colision_coche;
+    private Rectangle colision_obstaculo;
 
 
     private JFrame fr;
@@ -35,7 +37,6 @@ public class Juego extends JPanel  {
     private int yObstaculo=0;
 
     private int nivel=0;
-    private int puntos = 0;
 
 
 
@@ -46,7 +47,7 @@ public class Juego extends JPanel  {
     public Juego(Juego juego) {
         width = 823;
         height = 645;
-        velocidad_horizontal =15;
+        velocidad_horizontal =20;
         ctrl = new Mecanica(this);
         MetodoPrincipal();
     }
@@ -69,28 +70,28 @@ public class Juego extends JPanel  {
 
 
         carPanel = new JPanel();
-        carPanel.setSize(180, 150);
+        carPanel.setSize(90, 120);
 
         // Añadir imagen del coche al JPanel
         ImageIcon carIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Coche.png")));
         Image image = carIcon.getImage(); // Convertir el ImageIcon a Image
-        Image scaledImage = image.getScaledInstance(180, 150, Image.SCALE_SMOOTH); // Escalar la imagen al tamaño deseado
+        Image scaledImage = image.getScaledInstance(90, 130, Image.SCALE_SMOOTH); // Escalar la imagen al tamaño deseado
         ImageIcon scaledCarIcon = new ImageIcon(scaledImage);
         JLabel carLabel = new JLabel(scaledCarIcon);
         carPanel.add(carLabel);
-        carPanel.setLocation(400, 350);
+        carPanel.setLocation(400, 450);
         carPanel.setOpaque(false); // No mostrar el fondo transparente
 
 
 
 
         obstaculoPanel=new JPanel();
-        obstaculoPanel.setSize(150,277);
+        obstaculoPanel.setSize(88,173);
 
         // Añadir imagen del Coche_Obstaculo al JPanel
         ImageIcon obstaculoIcon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Coche_Obstaculo.png")));
         Image image1 = obstaculoIcon.getImage();
-        Image scaledImage1 = image1.getScaledInstance(150, 160, Image.SCALE_SMOOTH); // Escalar la imagen al tamaño deseado
+        Image scaledImage1 = image1.getScaledInstance(88, 173, Image.SCALE_SMOOTH); // Escalar la imagen al tamaño deseado
         ImageIcon scaledObstaculoIcon = new ImageIcon(scaledImage1);
         JLabel obstaculo = new JLabel(scaledObstaculoIcon);
         obstaculoPanel.add(obstaculo);
@@ -100,10 +101,12 @@ public class Juego extends JPanel  {
         //controles.moveObstacle();
         obstaculoPanel.setOpaque(false); // No mostrar el fondo transparente
 
+        colision_coche = new Rectangle(carPanel.getX(), carPanel.getY(), carPanel.getWidth(), carPanel.getHeight());
+        colision_obstaculo = new Rectangle(obstaculoPanel.getX(), obstaculoPanel.getY(), obstaculoPanel.getWidth(), obstaculoPanel.getHeight());
+
 
 
 /*
-
         //Añadir imagen de la moto Obstaculo al JPanel
         motoPanel=new JPanel();
         motoPanel.setSize(123,277);
@@ -111,14 +114,14 @@ public class Juego extends JPanel  {
         // Añadir imagen del Coche_Obstaculo al JPanel
         ImageIcon obstaculoIcon2 = new ImageIcon(Objects.requireNonNull(getClass().getResource("/Moto_Obstaculo.png")));
         Image image2 = obstaculoIcon2.getImage();
-        Image scaledImage2 = image1.getScaledInstance(120, 160, Image.SCALE_SMOOTH); // Escalar la imagen al tamaño deseado
-        ImageIcon scaledObstaculoIcon1 = new ImageIcon(scaledImage1);
-        JLabel moto = new JLabel(scaledObstaculoIcon1);
+        Image scaledImage2 = image2.getScaledInstance(120, 160, Image.SCALE_SMOOTH); // Escalar la imagen al tamaño deseado
+        ImageIcon scaledObstaculoIcon2 = new ImageIcon(scaledImage2);
+        JLabel moto = new JLabel(scaledObstaculoIcon2);
         motoPanel.add(moto);
         motoPanel.setLocation(200, 10);  // ajustar la ubicación del obstáculo
         motoPanel.setOpaque(false); // No mostrar el fondo transparente
-
 */
+
 
 
 
@@ -207,13 +210,4 @@ public class Juego extends JPanel  {
     public void setNivel(int nivel) {
         this.nivel = nivel;
     }
-
-    public void sumaPuntos(int puntos) {
-
-    }
-    public int getPuntos(){
-
-        return puntos;
-    }
-
 }

@@ -1,6 +1,7 @@
 package VideoJuego;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.Random;
 
 public class Gameloop  extends Thread {
@@ -30,9 +31,6 @@ public class Gameloop  extends Thread {
                     tiempoEspera=0;
                 }
 
-
-
-
                 obstaculo.setLocation(obstaculo.getX(),obstaculo.getY()+5);
 
                 if (obstaculo.getY() >= 470) {
@@ -46,14 +44,27 @@ public class Gameloop  extends Thread {
                 Thread.sleep((long)tiempoEspera);
                 siguenteDibujo+=dibujarIntervalo;
 
-                /*if (colision()) {
+                if (colision()) {
                     System.out.println("¡Chocaste!");
                     terminarJuego();
-                }*/
+                }
 
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
+    }
+
+    // Función para verificar colisiones
+    public boolean colision() {
+        Rectangle carBounds = juego.getCarPanel().getBounds();
+        Rectangle obstaculoBounds = juego.getObstaculoPanel().getBounds();
+        return ((Rectangle) carBounds).intersects(obstaculoBounds);
+    }
+
+    private void terminarJuego() {
+        JOptionPane.showMessageDialog(null, "Game Over. ¡Chocaste!", "Game Over", JOptionPane.INFORMATION_MESSAGE);
+        haTerminado = false;
+        System.exit(0);
     }
 }
