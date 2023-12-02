@@ -6,8 +6,16 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * La clase Main contiene el método principal que inicia la aplicación del videojuego.
+ */
 public class Main {
 
+    /**
+     * El método principal que inicia la aplicación del videojuego.
+     *
+     * @param args Los argumentos de la línea de comandos.
+     */
     public static void main(String[] args) {
         // SwingUtilities.invokeLater se utiliza para asegurarse de que la interfaz de usuario se actualice en el Event Dispatch Thread (EDT),
         // Se necesita para operaciones relacionadas con la interfaz gráfica en Swing.
@@ -33,8 +41,6 @@ public class Main {
                         Juego juego;
                         juego = Singleton.getJuego();
                         juego.starGameThread();
-
-
                     }
                 });
             }

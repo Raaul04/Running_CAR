@@ -1,7 +1,5 @@
 package Title;
 
-import VideoJuego.Juego;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -9,7 +7,7 @@ import java.awt.event.ActionListener;
 
 /**
  * La clase Title representa la pantalla de inicio del juego.
- * Contiene un botón de inicio que, cuando se presiona, notifica a
+ * Contiene un boton de inicio que, cuando se presiona, notifica a
  * la clase TitleManagement para iniciar el juego principal.
  */
 public class Title extends JPanel {
@@ -27,7 +25,7 @@ public class Title extends JPanel {
         setLayout(new BorderLayout());
         setBackground(new Color(135, 206, 250));  // Fondo de color cielo azul claro
 
-        // Configurar el botón de inicio
+        // Configurar el boton de inicio
         startButton = new JButton("¡Comienza!");
         startButton.setFont(new Font("Arial", Font.BOLD, 20));
         startButton.setForeground(Color.BLACK);
@@ -45,7 +43,7 @@ public class Title extends JPanel {
     }
 
     /**
-     * Agrega un ActionListener al botón de inicio en la pantalla de título.
+     * Agrega un ActionListener al boton de inicio en la pantalla de titulo.
      *
      * @param listener ActionListener a agregar.
      */

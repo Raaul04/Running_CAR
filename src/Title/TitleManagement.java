@@ -40,9 +40,8 @@ public class TitleManagement extends JFrame {
         title.setVisible(false);
 
         // Crear y mostrar el juego
-        //game = new VideoJuego.Juego(juego);
+        //Se encarga de obtener la instancia única del juego utilizando el patrón de diseño Singleton
         game= Singleton.getJuego();
-        System.out.println("Creado juego");
         add(game, BorderLayout.CENTER);
         pack(); // Ajustar el tamaño de la ventana
         setLocationRelativeTo(null);

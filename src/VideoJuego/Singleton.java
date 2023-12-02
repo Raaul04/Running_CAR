@@ -1,9 +1,9 @@
 package VideoJuego;
 
 /**
- * Clase Singleton que garantiza la existencia de una única instancia de la clase Juego.
+ * Clase Singleton que garantiza la existencia de una unica instancia de la clase Juego.
  */
-public final class Singleton {
+public class Singleton {
 
     // Instancia única del juego
     private static Juego juego;
@@ -13,15 +13,15 @@ public final class Singleton {
 
     /**
      * Constructor privado para evitar la instanciación directa de la clase.
-     * Se utiliza un constructor privado para forzar el uso del método getInstance().
+     * Se utiliza un constructor privado para forzar el uso del metodo getInstance().
      */
     private Singleton() {/* Constructor privado para evitar instanciación directa*/ }
 
     /**
-     * Método para obtener la única instancia de la clase Singleton.
-     * Si no existe una instancia, se crea una, emulando una inicialización lenta.
+     * Metodo para obtener la única instancia de la clase Singleton.
+     * Si no existe una instancia, se crea una, emulando una inicializacion lenta.
      *
-     * @return La única instancia de Singleton.
+     * @return La unica instancia de Singleton.
      */
     public static Singleton getInstance() {
         if (instance == null) {
@@ -36,10 +36,10 @@ public final class Singleton {
     }
 
     /**
-     * Método para obtener la única instancia del juego.
+     * Metodo para obtener la única instancia del juego.
      * Si no existe una instancia, se crea una.
      *
-     * @return La única instancia del juego.
+     * @return La unica instancia del juego.
      */
     public static Juego getJuego() {
         if (juego == null) {
