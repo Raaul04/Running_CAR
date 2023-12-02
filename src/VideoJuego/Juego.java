@@ -64,7 +64,7 @@ public class Juego extends JPanel {
         velocidad_horizontal = 20;
         ctrl = new Mecanica(this);
         pantallaPrincipal();
-        diseñoPuntos();
+        disenoPuntos();
         generarPosicionesAleatorias();
     }
 
@@ -184,7 +184,7 @@ public class Juego extends JPanel {
      * Agrega un JLabel para mostrar los puntos en la interfaz grafica del juego.
      */
 
-    public void diseñoPuntos() {
+    public void disenoPuntos() {
         // Agregar un JLabel para mostrar los puntos
         puntosLabel = new JLabel("Puntos: " + puntos);
         puntosLabel.setForeground(Color.BLACK); // Establecer el color del texto

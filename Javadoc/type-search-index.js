@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"VideoJuego","l":"Gameloop"},{"p":"VideoJuego","l":"Juego"},{"p":"VideoJuego","l":"Main"},{"p":"VideoJuego","l":"Mecanica"},{"p":"VideoJuego","l":"Singleton"},{"p":"Title","l":"Title"},{"p":"Title","l":"TitleManagement"}]
