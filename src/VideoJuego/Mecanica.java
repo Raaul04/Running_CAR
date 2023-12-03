@@ -40,7 +40,6 @@ public class Mecanica implements KeyListener {
             int x = juego.getCarPanel().getX();
             int y = juego.getCarPanel().getY();
 
-
             if (x - juego.getVelocidad_horizontal() > 145) {
                 juego.getCarPanel().setLocation(x - juego.getVelocidad_horizontal(), y);
             }

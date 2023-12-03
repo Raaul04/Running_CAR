@@ -21,10 +21,6 @@ public class Juego extends JPanel {
     // Etiqueta para mostrar los puntos
     private JLabel puntosLabel;
 
-    // Rectángulos de colision para el coche, obstaculo y moto
-    private Rectangle colision_coche;
-    private Rectangle colision_obstaculo;
-    private Rectangle colision_Moto;
 
     // Paneles para el coche, obstaculo y moto
     private JPanel carPanel;
@@ -65,7 +61,6 @@ public class Juego extends JPanel {
         ctrl = new Mecanica(this);
         pantallaPrincipal();
         disenoPuntos();
-        generarPosicionesAleatorias();
     }
 
     /**
@@ -127,9 +122,6 @@ public class Juego extends JPanel {
         motoPanel.setLocation(motoX, motoY); // Ajustar la ubicacion de la moto
         motoPanel.setOpaque(false); // No mostrar el fondo transparente
 
-        // Configuracion de las colisiones
-        colision_coche = new Rectangle(carPanel.getX(), carPanel.getY(), carPanel.getWidth(), carPanel.getHeight());
-        colision_obstaculo = new Rectangle(obstaculoPanel.getX(), obstaculoPanel.getY(), obstaculoPanel.getWidth(), obstaculoPanel.getHeight());
 
         // Configuración de la ventana principal
         background.add(carPanel);

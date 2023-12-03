@@ -102,9 +102,9 @@ public class Gameloop extends Thread {
                 e.printStackTrace();
             }
 
-            // Aumentar la puntuacion cada 1.5 segundos
+            // Aumentar la puntuacion cada 1.3 segundos
             tiempoTranscurrido = System.nanoTime() - ultimoTiempo;
-            if (tiempoTranscurrido >= 1_500_000_000) {
+            if (tiempoTranscurrido >= 1_300_000_000) {
                 juego.aumentarPuntos(10);
                 ultimoTiempo = System.nanoTime();
             }
@@ -116,6 +116,7 @@ public class Gameloop extends Thread {
      *
      * @return true si hay una colision, false en caso contrario.
      */
+
     public boolean colision() {
         Rectangle carBounds = juego.getCarPanel().getBounds();
         Rectangle obstaculoBounds = juego.getObstaculoPanel().getBounds();
