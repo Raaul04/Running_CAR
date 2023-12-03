@@ -135,9 +135,9 @@ public class Gameloop extends Thread {
         return false;
     }
 
-
     /**
-     * Muestra un mensaje de fin de juego y finaliza la aplicacion.
+     * Muestra un mensaje de fin de juego debido a una colisión.
+     * Finaliza el juego después de mostrar el mensaje.
      */
     public void terminarJuego() {
         JOptionPane.showMessageDialog(null, "Game Over. ¡Chocaste!", "Game Over", JOptionPane.INFORMATION_MESSAGE);

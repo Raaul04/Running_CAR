@@ -48,6 +48,10 @@ public class Juego extends JPanel {
     // Puntuacion del juego
     private int puntos = 0;
 
+    //Nivel del juego
+    private Nivel beta =new Beta(1,this);
+
+
     /**
      * Constructor de la clase Juego.
      * Inicializa las variables de configuracion del juego y llama al metodo IniciarJuego().
@@ -61,6 +65,7 @@ public class Juego extends JPanel {
         ctrl = new Mecanica(this);
         pantallaPrincipal();
         disenoPuntos();
+        beta.inicializar();
     }
 
     /**
@@ -213,23 +218,14 @@ public class Juego extends JPanel {
      * Finaliza el juego si se alcanza la maxima puntuacion.
      */
     public void maximaPuntuacion() {
-        if (puntos == 500) {
-            JOptionPane.showMessageDialog(null, "HAS GANADO", "Game Winner", JOptionPane.INFORMATION_MESSAGE);
+        if (puntos == 300) {
+            JOptionPane.showMessageDialog(null, "HAS GANADO", "NIVEL 1", JOptionPane.INFORMATION_MESSAGE);
             gameThread = null;
+            beta.terminarNivel();
             System.exit(0);
         }
     }
 
-    /**
-     * Muestra un mensaje de fin de juego debido a una colisión.
-     * Finaliza el juego después de mostrar el mensaje.
-     */
-
-    public void terminarJuego() {
-        JOptionPane.showMessageDialog(null, "Game Over. ¡Chocaste!", "Game Over", JOptionPane.INFORMATION_MESSAGE);
-        gameThread = null;
-        System.exit(0);
-    }
 
     /**
      * Obtiene la velocidad horizontal del juego.
