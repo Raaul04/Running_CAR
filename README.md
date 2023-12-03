@@ -30,31 +30,31 @@ La aplicación "Running Car" consta de las siguientes clases principales:
 6. *Clase Singleton:* garantiza la existencia de una unica instancia de la clase Juego.
 
 
-**Pantalla de Inicio - TitleManagement:**
+## Pantalla de Inicio - TitleManagement:
  
   <img width="135" alt="Captura de pantalla 2023-11-17 165142" src="https://github.com/Raaul04/Running_CAR/assets/144156038/757d3c02-c6b7-416d-9116-8be50eddc9a2">
 
 
 
- **Juego en Progreso:**
+## Juego en Progreso:
  
  <img width="598" alt="JUEGO" src="https://github.com/Raaul04/Running_CAR/assets/144156038/45eed52a-39b4-418b-9d23-9d56ee4fb65a">
 
 
 
- **Puntuacion:**
+ ## Puntuacion:
 
 <img width="601" alt="puntos" src="https://github.com/Raaul04/Running_CAR/assets/144156038/6900dd7f-b4e7-452a-93c8-9ca0d44b64c0">
 
 
 
- **Ganador**
+ ## Ganador:
  
    <img width="594" alt="GANAR" src="https://github.com/Raaul04/Running_CAR/assets/144156038/31a1962c-00c2-4362-9195-20b998e87c29">
 
 
 
- **Perdedor**
+ ## Perdedor:
  
    <img width="605" alt="termina" src="https://github.com/Raaul04/Running_CAR/assets/144156038/0e5b231d-6977-442f-b04b-947171300388">
 
