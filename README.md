@@ -16,18 +16,25 @@ La aplicación utiliza un esquema de clases implementado en Java y hace uso de l
 - El objetivo es avanzar lo más lejos posible sin colisiones.
 
 ## UML:
-<img width="501" alt="UML_PRACTICA_4" src="https://github.com/Raaul04/Running_CAR/assets/144156038/08c8c9df-01e6-42aa-8b44-157ef9bda391">
+
+<img width="881" alt="UML_P5" src="https://github.com/Raaul04/Running_CAR/assets/144156038/a00575a9-6019-404f-85f1-e4f844b37dc1">
+
 
 ## Componentes del Juego:
 
 La aplicación "Running Car" consta de las siguientes clases principales:
 
-1. **Clase Juego:** Interfaz principal del juego.
-2. **Clase GameLoop:** representa el bucle principal del juego
+1. **Clase Juego:** Interfaz principal del juego. Extiende JPanel para proporcionar un lienzo en el que se representan los elementos del juego.
+2. **Clase GameLoop:** representa el bucle principal del juego como un hilo separado. Se encarga de actualizar continuamente la posición de los elementos del juego, como el 
+    coche y los obstáculos, y verifica colisiones. Además, gestiona la puntuación y termina el juego en caso de colisión.
 3. **Clase Title:** Representa la pantalla de inicio del juego con un botón de inicio.
 4. **Clase TitleManagement:** Gestiona la pantalla de inicio y la transición al juego principal.
 5. **Clase Mecanica**: Clase que implementa KeyListener para gestionar los controles del jugador en el juego.
 6. **Clase Singleton:** garantiza la existencia de una unica instancia de la clase Juego.
+7. **Clase Nivel** La clase abstracta Nivel sirve como base para la implementación de diferentes niveles en el juego. Define métodos abstractos como inicializar y   
+    terminarNivel, que deben ser implementados por las clases que heredan de ella.
+8. **Clase Beta** La clase Beta es una implementación concreta de la clase Nivel. Representa un nivel específico del juego y proporciona una lógica única para la 
+    inicialización y finalización del nivel
 
 
 
