@@ -218,7 +218,7 @@ public class Juego extends JPanel {
      * Finaliza el juego si se alcanza la maxima puntuacion.
      */
     public void maximaPuntuacion() {
-        if (puntos == 300) {
+        if (puntos == 500) {
             JOptionPane.showMessageDialog(null, "HAS GANADO", "NIVEL 1", JOptionPane.INFORMATION_MESSAGE);
             gameThread = null;
             beta.terminarNivel();
