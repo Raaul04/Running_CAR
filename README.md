@@ -31,9 +31,9 @@ La aplicación "Running Car" consta de las siguientes clases principales:
 4. **Clase TitleManagement:** Gestiona la pantalla de inicio y la transición al juego principal.
 5. **Clase Mecanica**: Clase que implementa KeyListener para gestionar los controles del jugador en el juego.
 6. **Clase Singleton:** garantiza la existencia de una unica instancia de la clase Juego.
-7. **Clase Nivel:**La clase abstracta Nivel sirve como base para la implementación de diferentes niveles en el juego. Define métodos abstractos como inicializar y   
+7. **Clase Nivel** La clase abstracta Nivel sirve como base para la implementación de diferentes niveles en el juego. Define métodos abstractos como inicializar y   
     terminarNivel, que deben ser implementados por las clases que heredan de ella.
-8. **Clase Beta:**La clase Beta es una implementación concreta de la clase Nivel. Representa un nivel específico del juego y proporciona una lógica única para la 
+8. **Clase Beta** La clase Beta es una implementación concreta de la clase Nivel. Representa un nivel específico del juego y proporciona una lógica única para la 
     inicialización y finalización del nivel
 
 
