@@ -2,11 +2,7 @@
 
 ## Descripción de la Aplicación:
 
-<<<<<<< HEAD
 La aplicación "Running Car" es un juego sencillo que te pone al volante de un coche, desafiándote a esquivar obstáculos en la carretera. El objetivo es guiar el coche a través del tráfico, evitando colisiones con otros vehículos que se desplazan en distinta dirección. El coche tiene la capacidad de cambiar de carril, lo que añade un elemento estratégico al juego.
-=======
-La aplicación "Running Car" es un juego sencillo que te pone al volante de un coche, desafiándote a esquivar obstáculos en la carretera. El objetivo es guiar el coche a través del tráfico, evitando colisiones con otros vehículos que se desplazan en distinta dirección. El coche tiene la capacidad de cambiar de carril, lo que añade un elemento estratégico al juego.
->>>>>>> 8cbf71936f478e874cf709eae1eab2831c648b0d
 
 ## BOCETO:
 ![BOCETO](https://github.com/Raaul04/Trabajo_carrera/assets/144156038/2d51e55a-6705-468f-91e1-5a4d97012adc)
@@ -26,7 +22,6 @@ La aplicación utiliza un esquema de clases implementado en Java y hace uso de l
 
 La aplicación "Running Car" consta de las siguientes clases principales:
 
-<<<<<<< HEAD
 1. **Clase Juego:** Interfaz principal del juego.
 2. **Clase GameLoop:** representa el bucle principal del juego
 3. **Clase Title:** Representa la pantalla de inicio del juego con un botón de inicio.
@@ -53,46 +48,32 @@ La aplicación "Running Car" consta de las siguientes clases principales:
 
 ## Pantalla de Inicio - TitleManagement:
  
-  <img width="135" alt="Captura de pantalla 2023-11-17 165142" src="https://github.com/Raaul04/Running_CAR/assets/144156038/757d3c02-c6b7-416d-9116-8be50eddc9a2">
->>>>>>> 8cbf71936f478e874cf709eae1eab2831c648b0d
+<img width="135" alt="Captura de pantalla 2023-11-17 165142" src="https://github.com/Raaul04/Running_CAR/assets/144156038/757d3c02-c6b7-416d-9116-8be50eddc9a2">
 
-  ![JUEGO.png](..%2F..%2F..%2F..%2FSynologyDrive1%2FNEBRIJA%2F2%BA%20A%D1O%2F1%BA%20CUATRIMESTRE%2FTECNICAS%20DE%20PROGRAMACION%2FJUEGO.png)
-
- **Puntuación:**
-
-<<<<<<< HEAD
-![puntos.png](..%2F..%2F..%2F..%2FSynologyDrive1%2FNEBRIJA%2F2%BA%20A%D1O%2F1%BA%20CUATRIMESTRE%2FTECNICAS%20DE%20PROGRAMACION%2Fpuntos.png)
-
- **Ganador**
-
-![GANAR.png](..%2F..%2F..%2F..%2FSynologyDrive1%2FNEBRIJA%2F2%BA%20A%D1O%2F1%BA%20CUATRIMESTRE%2FTECNICAS%20DE%20PROGRAMACION%2FGANAR.png)
-
- **Termina**
-
-  ![termina.png](..%2F..%2F..%2F..%2FSynologyDrive1%2FNEBRIJA%2F2%BA%20A%D1O%2F1%BA%20CUATRIMESTRE%2FTECNICAS%20DE%20PROGRAMACION%2Ftermina.png)
-=======
 ## Juego en Progreso:
+
  
- <img width="598" alt="JUEGO" src="https://github.com/Raaul04/Running_CAR/assets/144156038/45eed52a-39b4-418b-9d23-9d56ee4fb65a">
+<img width="598" alt="JUEGO" src="https://github.com/Raaul04/Running_CAR/assets/144156038/ff321899-f8a9-491d-97d8-5bf07984fdde">
 
-
->>>>>>> 8cbf71936f478e874cf709eae1eab2831c648b0d
 
  ## Puntuacion:
+ 
 
-<img width="601" alt="puntos" src="https://github.com/Raaul04/Running_CAR/assets/144156038/6900dd7f-b4e7-452a-93c8-9ca0d44b64c0">
+<img width="601" alt="puntos" src="https://github.com/Raaul04/Running_CAR/assets/144156038/36c63708-64b5-4d1f-9f7a-f2f873f9fac6">
 
 
 
  ## Ganador:
  
-   <img width="594" alt="GANAR" src="https://github.com/Raaul04/Running_CAR/assets/144156038/31a1962c-00c2-4362-9195-20b998e87c29">
+
+<img width="594" alt="GANAR" src="https://github.com/Raaul04/Running_CAR/assets/144156038/85aa5ce7-5b5b-426f-b5fe-cd9d6fc46829">
 
 
 
- ## Perdedor:
+ ## Termina:
  
-   <img width="605" alt="termina" src="https://github.com/Raaul04/Running_CAR/assets/144156038/0e5b231d-6977-442f-b04b-947171300388">
+
+<img width="605" alt="termina" src="https://github.com/Raaul04/Running_CAR/assets/144156038/1b8ade73-89ff-45bf-aa47-79f507d6ad55">
 
 ## Uso:
 1. Ejecuta la aplicación.
