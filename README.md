@@ -2,7 +2,7 @@
 
 ## Descripción de la Aplicación:
 
-La aplicación "Running Car" es un juego sencillo que te pone al volante de un coche, desafiándote a esquivar obstáculos en la carretera. El objetivo es guiar el coche a través del tráfico, evitando colisiones con otros vehículos que se desplazan en la misma dirección. El coche tiene la capacidad de cambiar de carril, lo que añade un elemento estratégico al juego.
+La aplicación "Running Car" es un juego sencillo que te pone al volante de un coche, desafiándote a esquivar obstáculos en la carretera. El objetivo es guiar el coche a través del tráfico, evitando colisiones con otros vehículos que se desplazan en distinta dirección. El coche tiene la capacidad de cambiar de carril, lo que añade un elemento estratégico al juego.
 
 ## BOCETO:
 ![BOCETO](https://github.com/Raaul04/Trabajo_carrera/assets/144156038/2d51e55a-6705-468f-91e1-5a4d97012adc)
@@ -23,12 +23,12 @@ La aplicación utiliza un esquema de clases implementado en Java y hace uso de l
 La aplicación "Running Car" consta de las siguientes clases principales:
 
 1. **Clase Juego:** Interfaz principal del juego.
-2. **Clase Coche_Player:** Clase que hereda de la clase abstracta Vehiculo y representa el coche del          jugador en el juego..
+2. **Clase GameLoop:** representa el bucle principal del juego
 3. **Clase Title:** Representa la pantalla de inicio del juego con un botón de inicio.
 4. **Clase TitleManagement:** Gestiona la pantalla de inicio y la transición al juego principal.
-5. **Clase Controles**:  Clase que implementa KeyListener para gestionar los controles del jugador en el      juego.
-6. **Clase Panel**:Clase que extiende JPanel y proporciona una personalización adicional al juego.
-7. **Clase Obstaculo**:Clase que representa los obstáculos en el juego.
+5. **Clase Mecanica**: Clase que implementa KeyListener para gestionar los controles del jugador en el juego.
+6. **Clase Singleton:** garantiza la existencia de una unica instancia de la clase Juego.
+
 
 
 **Pantalla de Inicio - TitleManagement:**
@@ -37,15 +37,20 @@ La aplicación "Running Car" consta de las siguientes clases principales:
 
 
  **Juego en Progreso:**
- 
-  <img width="604" alt="Juego" src="https://github.com/Raaul04/Running_CAR/assets/144156038/67ccf60d-34d5-414e-a3eb-b207a1fa7b00">
 
+  ![JUEGO.png](..%2F..%2F..%2F..%2FSynologyDrive1%2FNEBRIJA%2F2%BA%20A%D1O%2F1%BA%20CUATRIMESTRE%2FTECNICAS%20DE%20PROGRAMACION%2FJUEGO.png)
 
+ **Puntuación:**
 
+![puntos.png](..%2F..%2F..%2F..%2FSynologyDrive1%2FNEBRIJA%2F2%BA%20A%D1O%2F1%BA%20CUATRIMESTRE%2FTECNICAS%20DE%20PROGRAMACION%2Fpuntos.png)
 
- **Cambiar de Carril:**
+ **Ganador**
 
-   <img width="749" alt="CAMBIO_DE_CARRIL" src="https://github.com/Raaul04/Running_CAR/assets/144156038/efff1313-54b4-4be5-87ba-c9fe51f206d8">
+![GANAR.png](..%2F..%2F..%2F..%2FSynologyDrive1%2FNEBRIJA%2F2%BA%20A%D1O%2F1%BA%20CUATRIMESTRE%2FTECNICAS%20DE%20PROGRAMACION%2FGANAR.png)
+
+ **Termina**
+
+  ![termina.png](..%2F..%2F..%2F..%2FSynologyDrive1%2FNEBRIJA%2F2%BA%20A%D1O%2F1%BA%20CUATRIMESTRE%2FTECNICAS%20DE%20PROGRAMACION%2Ftermina.png)
 
    
 ## Uso:
