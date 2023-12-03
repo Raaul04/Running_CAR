@@ -31,16 +31,6 @@ La aplicación "Running Car" consta de las siguientes clases principales:
 
 
 
- **Juego en Progreso:**
-=======
-1. *Clase Juego:* Interfaz principal del juego.
-2. *Clase GameLoop:* representa el bucle principal del juego
-3. *Clase Title:* Representa la pantalla de inicio del juego con un botón de inicio.
-4. *Clase TitleManagement:* Gestiona la pantalla de inicio y la transición al juego principal.
-5. *Clase Mecanica*: Clase que implementa KeyListener para gestionar los controles del jugador en el juego.
-6. *Clase Singleton:* garantiza la existencia de una unica instancia de la clase Juego.
-
-
 ## Pantalla de Inicio - TitleManagement:
  
 <img width="135" alt="Captura de pantalla 2023-11-17 165142" src="https://github.com/Raaul04/Running_CAR/assets/144156038/757d3c02-c6b7-416d-9116-8be50eddc9a2">
