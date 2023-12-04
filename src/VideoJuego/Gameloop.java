@@ -140,7 +140,7 @@ public class Gameloop extends Thread {
      * Finaliza el juego después de mostrar el mensaje.
      */
     public void terminarJuego() {
-        JOptionPane.showMessageDialog(null, "Game Over. ¡Chocaste!", "Game Over", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Game Over. ¡Chocaste!", "NIVEL 1", JOptionPane.INFORMATION_MESSAGE);
         haTerminado = false;
         System.exit(0);
     }

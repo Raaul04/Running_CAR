@@ -42,11 +42,11 @@ public class Beta extends Nivel {
             case 1:
                 return 100;
             case 2:
-                return 500;
+                return 200;
             case 3:
-                return 1000;
+                return 300;
             case 4:
-                return 2000;
+                return 500;
             default:
                 return Integer.MAX_VALUE; // Puntuación maxima, nivel maximo
         }
