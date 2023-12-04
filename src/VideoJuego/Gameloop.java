@@ -136,7 +136,7 @@ public class Gameloop extends Thread {
     }
 
     /**
-     * Muestra un mensaje de fin de juego debido a una colisión.
+     * Muestra un mensaje de fin de juego debido a una colision.
      * Finaliza el juego después de mostrar el mensaje.
      */
     public void terminarJuego() {

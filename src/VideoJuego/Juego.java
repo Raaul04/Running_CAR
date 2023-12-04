@@ -11,6 +11,8 @@ import java.util.Random;
  * Extiende JPanel para proporcionar un lienzo en el que se representaran los elementos del juego.
  */
 public class Juego extends JPanel {
+    // Nivel del juego
+    private Nivel nivel;
 
     // Hilo del juego
     Thread gameThread;
@@ -33,6 +35,7 @@ public class Juego extends JPanel {
     // Etiqueta de fondo y parametros de la ventana
     private JLabel background;
     private int velocidad_horizontal;
+
     private int width;
     private int height;
 
@@ -48,13 +51,10 @@ public class Juego extends JPanel {
     // Puntuacion del juego
     private int puntos = 0;
 
-    //Nivel del juego
-    private Nivel beta =new Beta(1,this);
-
 
     /**
      * Constructor de la clase Juego.
-     * Inicializa las variables de configuracion del juego y llama al metodo IniciarJuego().
+     * Inicializa las variables de configuracion del juego y llama al metodo pantallaPrincipal().
      *
      * @param juego Instancia de la clase Juego.
      */
@@ -65,8 +65,12 @@ public class Juego extends JPanel {
         ctrl = new Mecanica(this);
         pantallaPrincipal();
         disenoPuntos();
-        beta.inicializar();
+
+        // Inicializar el nivel (puedes cambiarlo según tus necesidades)
+        nivel = new Beta(1, this);
+        nivel.inicializar();
     }
+
 
     /**
      * Inicializa y configura la ventana principal del juego.
@@ -141,7 +145,7 @@ public class Juego extends JPanel {
     }
 
     /**
-     * Genera posiciones aleatorias para el obstáculo y la moto.
+     * Genera posiciones aleatorias para el obstaculo y la moto.
      */
     public void generarPosicionesAleatorias() {
         // Generar posicion aleatoria para el obstaculo
@@ -177,6 +181,18 @@ public class Juego extends JPanel {
         gameThread.start();
     }
 
+    /*
+    *Nivel del juego
+     */
+    public Nivel beta = new Beta(1, this) {
+        @Override
+        public void aumentarNivel() {
+            if (puntos % 100 == 0) {
+                beta.aumentarNivel();
+            }
+        }
+
+    };
     /**
      * Agrega un JLabel para mostrar los puntos en la interfaz grafica del juego.
      */
@@ -195,15 +211,20 @@ public class Juego extends JPanel {
     }
 
     /**
-     * Aumenta la puntuacion del juego en la cantidad especificada.
+     * Aumenta la puntuación del juego en la cantidad especificada.
      *
-     * @param cantidad Cantidad de puntos que se agregaran.
+     * @param cantidad Cantidad de puntos que se agregarán.
      */
     public void aumentarPuntos(int cantidad) {
         puntos += cantidad;
-        // Actualizar la interfaz grafica para mostrar los puntos, por ejemplo, en un JLabel
+        // Actualizar la interfaz gráfica para mostrar los puntos
         actualizarInterfaz();
+
+        // Aumentar el nivel si es necesario
+        nivel.aumentarNivel();
     }
+
+
 
     /**
      * Actualiza la interfaz grafica para reflejar la puntuacion actualizada.
@@ -218,7 +239,7 @@ public class Juego extends JPanel {
      * Finaliza el juego si se alcanza la maxima puntuacion.
      */
     public void maximaPuntuacion() {
-        if (puntos == 500) {
+        if (puntos == 2000) {
             JOptionPane.showMessageDialog(null, "HAS GANADO", "NIVEL 1", JOptionPane.INFORMATION_MESSAGE);
             gameThread = null;
             beta.terminarNivel();
@@ -317,6 +338,24 @@ public class Juego extends JPanel {
      */
     public int getPuntos() {
         return puntos;
+    }
+
+    /**
+     * Obtiene la velocidad horizontal del juego.
+     *
+     * @return La velocidad horizontal actual.
+     */
+    public int getVelocidadHorizontal() {
+        return velocidad_horizontal;
+    }
+
+    /**
+     * Establece la velocidad horizontal del juego.
+     *
+     * @param velocidadHorizontal La nueva velocidad horizontal.
+     */
+    public void setVelocidadHorizontal(int velocidadHorizontal) {
+        this.velocidad_horizontal = velocidadHorizontal;
     }
 
 }
