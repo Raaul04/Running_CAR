@@ -6,16 +6,16 @@ package VideoJuego;
 public class Singleton {
 
     // Instancia única del juego
-    public static Juego juego;
+    private static Juego juego;
 
     // Instancia única del Singleton
-    public static Singleton instance;
+    private static Singleton instance;
 
     /**
-     * Constructor privado para evitar la instanciación directa de la clase.
+     * Constructor para evitar la instanciación directa de la clase.
      * Se utiliza un constructor privado para forzar el uso del metodo getInstance().
      */
-    public Singleton() {/* Constructor privado para evitar instanciación directa*/ }
+    public Singleton() {/* Constructor para evitar instanciación directa*/ }
 
     /**
      * Metodo para obtener la única instancia de la clase Singleton.
