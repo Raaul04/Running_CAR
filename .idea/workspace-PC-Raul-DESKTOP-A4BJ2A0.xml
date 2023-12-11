@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e61575aa-d991-45e9-97b0-1e02a4c377cd" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2XSGC3EeYVJOrEeb5ExXwcqwE4R" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\raull\OneDrive\Escritorio\Trabajo_carrera-master\Trabajo_carrera-master\res" />
+      <recent name="C:\Users\raull\OneDrive\Escritorio\Trabajo_carrera-master\Trabajo_carrera-master\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="VideoJuego.Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="VideoJuego.Main" />
+      <module name="RUNNING CAR" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VideoJuego.Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="VideoJuego.Main" />
+      <module name="RUNNING CAR" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e61575aa-d991-45e9-97b0-1e02a4c377cd" name="Changes" comment="" />
+      <created>1698614937098</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698614937098</updated>
+      <workItem from="1698614938679" duration="24000" />
+      <workItem from="1698615435704" duration="137000" />
+      <workItem from="1698618636464" duration="417000" />
+      <workItem from="1698651768369" duration="1911000" />
+      <workItem from="1699459983696" duration="1179000" />
+      <workItem from="1699555848482" duration="2399000" />
+      <workItem from="1699729508828" duration="8340000" />
+      <workItem from="1699741253101" duration="2157000" />
+      <workItem from="1699747701543" duration="335000" />
+      <workItem from="1699748465627" duration="111000" />
+      <workItem from="1699748594111" duration="351000" />
+      <workItem from="1699749089288" duration="85000" />
+      <workItem from="1699749198739" duration="405000" />
+      <workItem from="1699802684418" duration="288000" />
+      <workItem from="1699809571500" duration="63000" />
+      <workItem from="1699809644542" duration="29000" />
+      <workItem from="1699809841467" duration="18000" />
+      <workItem from="1699824385581" duration="27000" />
+      <workItem from="1699824744684" duration="265000" />
+      <workItem from="1699825022018" duration="134000" />
+      <workItem from="1699825190707" duration="30000" />
+      <workItem from="1699825257460" duration="13000" />
+      <workItem from="1699866640310" duration="2236000" />
+      <workItem from="1699871484270" duration="696000" />
+      <workItem from="1700062818815" duration="4427000" />
+      <workItem from="1700119829798" duration="10266000" />
+      <workItem from="1700145730089" duration="4966000" />
+      <workItem from="1700156895474" duration="9697000" />
+      <workItem from="1700210556629" duration="12932000" />
+      <workItem from="1700237881999" duration="8000" />
+      <workItem from="1700436061301" duration="654000" />
+      <workItem from="1700470900223" duration="111000" />
+      <workItem from="1700471729924" duration="407000" />
+      <workItem from="1700479646241" duration="5613000" />
+      <workItem from="1700504394676" duration="3304000" />
+      <workItem from="1700577549680" duration="54000" />
+      <workItem from="1700577720456" duration="2055000" />
+      <workItem from="1700589931744" duration="848000" />
+      <workItem from="1700592101112" duration="300000" />
+      <workItem from="1700592616614" duration="2000" />
+      <workItem from="1700592895477" duration="3330000" />
+      <workItem from="1700596715345" duration="944000" />
+      <workItem from="1700663836833" duration="2676000" />
+      <workItem from="1700726096314" duration="3094000" />
+      <workItem from="1700729419112" duration="6880000" />
+      <workItem from="1700743789443" duration="4562000" />
+      <workItem from="1700751661342" duration="310000" />
+      <workItem from="1700752341405" duration="3712000" />
+      <workItem from="1700954862628" duration="4157000" />
+      <workItem from="1700984918854" duration="183000" />
+      <workItem from="1700985111507" duration="3113000" />
+      <workItem from="1701071058775" duration="7909000" />
+      <workItem from="1701081420516" duration="1950000" />
+      <workItem from="1701084465228" duration="13608000" />
+      <workItem from="1701250331810" duration="6002000" />
+      <workItem from="1701269372415" duration="1700000" />
+      <workItem from="1701272385445" duration="2457000" />
+      <workItem from="1701282790860" duration="4178000" />
+      <workItem from="1701329447713" duration="618000" />
+      <workItem from="1701330160346" duration="4394000" />
+      <workItem from="1701340108036" duration="906000" />
+      <workItem from="1701342102177" duration="78000" />
+      <workItem from="1701342735541" duration="1279000" />
+      <workItem from="1701347632993" duration="4648000" />
+      <workItem from="1701355024425" duration="5505000" />
+      <workItem from="1701611003676" duration="675000" />
+    </task>
+    <task id="LOCAL-00001" summary="README">
+      <option name="closed" value="true" />
+      <created>1701610827589</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701610827589</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update">
+      <option name="closed" value="true" />
+      <created>1701610894413</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701610894413</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="README" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
